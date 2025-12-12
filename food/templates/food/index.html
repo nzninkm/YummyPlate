@@ -11,19 +11,27 @@
     {% block body %} {% for item in item_list %}
     <div class="row">
       <div class="col-md-3 offset-md-2">
-        <img class="card" height="150px" src="{{ item.item_image}}" />
+        <img
+          class="card img-fluid"
+          src="{{ item.item_image}}"
+          style="max-height: 150px;"
+        />
       </div>
       <div class="col-md-4">
         <h3>{{ item.item_name }}</h3>
         <h5>{{ item.item_desc }}</h5>
-        <h6>{{ item.item_price }}</h6>
+        <h6>${{ item.item_price }}</h6>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <a href="{% url 'food:detail' item.id %}" class="btn btn-success">
+          Details
+        </a>
+      </div>
     </div>
     {% endfor %} {% endblock %} This is the old code
     <ul>
       <li>
-        <a href="{% url 'food:detail' item.id %}">
+        <a href="">
           {{ item.id }} -- {{ item.item_name}}
         </a>
       </li>
