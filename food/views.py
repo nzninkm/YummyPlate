@@ -6,7 +6,10 @@ from .forms import ItemForm
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.views.generic.edit import CreateView
+=======
+>>>>>>> fa6fc21274cb63503c7c63cd76ec381f42668023
 =======
 >>>>>>> fa6fc21274cb63503c7c63cd76ec381f42668023
 
